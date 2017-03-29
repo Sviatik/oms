@@ -19,7 +19,7 @@ node {
     }
     
     stage ('deploy to remote host') {
-    	sh 'sudo ssh -i /home/jenkins/aws.pem ec2-user@35.158.76.35 "ls"'
+    	sh 'ssh -i /home/jenkins/aws.pem ec2-user@35.158.76.35 "ls"'
     }
 }
 

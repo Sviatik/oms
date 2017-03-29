@@ -1,5 +1,7 @@
 #!groovy
 node {
+	deleteDir()
+	
     stage 'git'
         git 'https://github.com/Sviatik/oms.git'
     stage 'stage2'
@@ -12,5 +14,4 @@ node {
     
     stage 'deploy'
         sh 'cp target/OMS.war /usr/share/tomcat/webapps/'
-
 }

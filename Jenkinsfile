@@ -18,7 +18,10 @@ node {
         sh "${mvnHome}/bin/mvn -DskipTests=true clean install"
     }
     
-    stage ('deploy') {
-        sh 'cp target/OMS.war /usr/share/tomcat/webapps/'
+    stage ('deploy to remote host') {
+        sshagent(['dbf4729e-28be-40e7-93a7-b87337ca396c']) {
+    		sh 'scp target/OMS.war 35.158.76.35:/usr/share/tomcat/webapps/'
+		}
     }
 }
+

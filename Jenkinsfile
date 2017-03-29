@@ -18,7 +18,7 @@ node {
 //        sh "${mvnHome}/bin/mvn -DskipTests=true clean install"
 //    }
     stage ('test1') {
-    	sh 'ssh-keyscan 10.129.132.88 >> ~/.ssh'
+    	sh 'ssh-keyscan 10.129.132.88 >> ~/.ssh/known_hosts'
     }
     
 

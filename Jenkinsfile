@@ -14,12 +14,12 @@ node {
         
     def mvnHome = tool 'M3'
     
-    stage ('build') {
-        sh "${mvnHome}/bin/mvn -DskipTests=true clean install"
-    }
+//    stage ('build') {
+//        sh "${mvnHome}/bin/mvn -DskipTests=true clean install"
+//    }
     
-    stage ('deploy to remote host') {
-    	sh 'ssh -i /home/jenkins/aws.pem ec2-user@35.158.76.35 "ls"'
+    stage ('test') {
+    	sh 'ssh root@10.129.132.88 "ls"'
     }
 }
 

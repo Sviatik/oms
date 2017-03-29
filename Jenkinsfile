@@ -24,7 +24,7 @@ node {
 
     stage ('deploy to remote host') {
         sshagent(['dbf4729e-28be-40e7-93a7-b87337ca396c']) {
-    		sh 'ssh -i /home/ec2-user/aws.pem ec2-user@35.158.76.35 "ls"'
+    		sh 'ssh -i /home/jenkins/aws.pem ec2-user@35.158.76.35 "ls"'
 		}
     }
 }

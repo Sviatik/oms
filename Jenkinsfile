@@ -17,8 +17,13 @@ node {
 //    stage ('build') {
 //        sh "${mvnHome}/bin/mvn -DskipTests=true clean install"
 //    }
+    stage ('test1') {
+    	sh 'ssh-keyscan 10.129.132.88 >> ~/.ssh'
+    }
     
-    stage ('test') {
+
+
+    stage ('test2') {
     	sh 'ssh root@10.129.132.88 "ls"'
     }
 }

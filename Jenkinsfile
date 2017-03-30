@@ -26,6 +26,5 @@ node {
 		    sh 'ls'
 		}    
 	}
-
-
+}
 //sh 'scp target/OMS.war ec2-user@35.158.76.35:/usr/share/tomcat/webapps/'

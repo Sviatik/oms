@@ -23,7 +23,7 @@ node {
 
 	stage ('test1') {
 		sshagent(['44e0a983-236b-4640-802c-71880878ede0']) {
-		    sh 'ls'
+		    sh 'ls; ip a; '
 		}    
 	}
 }

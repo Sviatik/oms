@@ -1,5 +1,5 @@
 #!groovy
-node 'app1'{
+node {
 	stage ('remove workspase') {
 		deleteDir()
 	}

@@ -23,7 +23,8 @@ node {
 
 	stage ('test1') {
 		sshagent(['a5d4ee19-dcd1-4ef3-b27f-8ba729d0a430']) {
-		    sh 'ssh -o StrictHostKeyChecking=no -l root 10.129.132.76 uname -a'
+			sh 'ls -la'
+		    sh 'ssh -o StrictHostKeyChecking=no -l root@10.129.132.76 uname -a'
 		}    
 	}
 }

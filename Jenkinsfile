@@ -21,15 +21,11 @@ node {
 //    	sh 'ssh-keyscan 10.129.132.88 >> ~/.ssh/known_hosts'
 //    }
 
+	stage ('test1') {
+		sshagent(['44e0a983-236b-4640-802c-71880878ede0']) {
+		    sh 'ls'
+		}    
+	}
 
-	sshagent(['44e0a983-236b-4640-802c-71880878ede0']) {
-	    sh 'ls'
-	}    
-
-
-    stage ('test2') {
-    	sh 'ssh root@10.129.132.88 "ls"'
-    }
-}
 
 //sh 'scp target/OMS.war ec2-user@35.158.76.35:/usr/share/tomcat/webapps/'

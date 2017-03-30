@@ -17,10 +17,14 @@ node {
 //    stage ('build') {
 //        sh "${mvnHome}/bin/mvn -DskipTests=true clean install"
 //    }
-    stage ('test1') {
-    	sh 'ssh-keyscan 10.129.132.88 >> ~/.ssh/known_hosts'
-    }
-    
+//    stage ('test1') {
+//    	sh 'ssh-keyscan 10.129.132.88 >> ~/.ssh/known_hosts'
+//    }
+
+
+	sshagent(['44e0a983-236b-4640-802c-71880878ede0']) {
+	    sh 'ls'
+	}    
 
 
     stage ('test2') {

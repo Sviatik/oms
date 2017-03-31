@@ -4,6 +4,11 @@ node {
 		deleteDir()
 	}
 
+	stage ('remove deploy workspase') {
+		sh "sudo rm -rf /usr/share/tomcat/webapps/OMS*"
+	}
+
+
     stage ('git') {
         git 'https://github.com/Sviatik/oms.git'
     }
